@@ -1,0 +1,199 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    text-rendering: optimizeLegibility;
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    }
+  
+  /*
+   BARVY
+   svetle sede pozadi      #f5f5f5
+   tmavsi seda             #959595
+   barevny prechod nahore  #06d7c1
+   barevny prechod dole    #50cc49
+   zelena cara             #06d7c1
+   oranzova                #f15f42
+   PISMO
+   Rubik - pouzite rezy pisma regular 400 a medium 500
+   https://fonts.google.com/specimen/Rubik
+  */
+  
+  /* ----- zde zacni psat vlastni css ----- */
+  
+  .zbozi {
+    display: flex;
+    width: 670px;
+    height: 530px;
+    margin: 6rem auto;
+    border-radius: 40px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3)
+    }
+  
+  .vizual {
+    flex: 0 1 35%;
+    background: linear-gradient(to bottom, #06d7c1, #50cc49);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+  }
+  
+  .logo img {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 154px;
+    height: 23px;
+    z-index: 10;
+  }
+  
+  .green img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 161%;
+  }
+  
+  .cenovka {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    text-align: left;
+  }
+  
+  .cena {
+    font-size: 30px;
+    font-weight: 900;
+    font-weight: bold;
+    color: white;
+   }
+  
+  .monday {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    }
+   
+  .detaily {
+    flex: 0 1 65%;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  } 
+  
+  .nazev {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    padding-top: 20px;
+    }
+  
+  .chut {
+    font-size: 16px;
+    font-weight: 700;
+    color: #959595;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    }
+  
+  .popis {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #06d7c1;
+    line-height: 26px;
+  }
+  
+  .parametr {
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 2rem;
+  }
+  
+  .prichute ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;  
+  }
+
+  .prichute ul li {
+      list-style: none;
+  }
+
+  .prichute ul li a {
+      color: #000;
+      text-decoration: none;
+      padding-bottom: 0.5rem;
+  }
+
+  .prichute ul li a:hover {
+      border-bottom: 3px solid #50cc49;
+      color: #003b27;
+  }
+  
+
+  .tlacitko {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color:  #50cc49;
+    border: 1px solid #50cc49;
+    border-radius: 5px;
+    padding: 15px 25px;
+  }
+  
+  .tlacitko:hover {
+    background-color:  #003b27;
+    border: 1px solid #003b27;
+  }
+  
+  .box {
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      left: 0;
+      top: 100px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      background: url("../img/cat_icon.png") center center no-repeat;
+      background-color: aquamarine;
+      transition: all 1.0s ease-out;
+  }
+
+  .box:hover {
+      background-position-x: -60px;
+      width: 150px;
+  }
+
+  .box a {
+      text-decoration: none;
+      color: #000;
+      font-size: 30px;
+      line-height: 50px;
+      padding: 0 25px;
+      opacity: 0;
+  }
+
+  .box a:hover {
+      opacity: 1;
+      float: right;
+  }
